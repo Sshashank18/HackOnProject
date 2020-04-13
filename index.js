@@ -51,15 +51,6 @@ window.addEventListener("load",function(){
         editor.execCommand('FontSize',false,event.target.value);
     },false);
 
-    linkButton.addEventListener('click',()=>{
-        var url = prompt("Enter a URL : ","http://");
-        editor.execCommand("CreateLink",false,url);
-    },false);
-
-    unLinkButton.addEventListener('click',()=>{
-        editor.execCommand("UnLink",false,null);
-    },false);
-
     undoButton.addEventListener('click',()=>{
         editor.execCommand("undo",false,null);
     },false);
