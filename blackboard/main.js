@@ -11,19 +11,32 @@ let lastY = 0;
 
 let currentTool = "pen";
 
+
+let eraserRadius = 50;
+let pencilColor = "#000000";
+
 canvas.addEventListener("mousemove", event => {
     let x = event.clientX,
         y = event.clientY;
 
     if (currentTool === "eraser") {
-       mouseWrapper.style.left = x - 10 + "px";
-       mouseWrapper.style.top = y - 10 + "px";
-    }    
+        let offset = eraserRadius * 0.4;
+        mouseWrapper.style.width = eraserRadius + "px";
+        mouseWrapper.style.height = eraserRadius + "px";
+        mouseWrapper.style.left = x - offset + "px";
+        mouseWrapper.style.top = y - offset + "px";
+    } else {
+        mouseWrapper.style.left = "-100px";
+        mouseWrapper.style.top = "-100px";
+    }   
+
+
     if (mouseDown) {
         context.save();
         switch (currentTool) {
             case "pen":
                 context.beginPath();
+                context.strokeStyle = pencilColor;
                 context.moveTo(lastX, lastY);
                 context.lineTo(x, y);
                 context.stroke();
@@ -32,7 +45,7 @@ canvas.addEventListener("mousemove", event => {
             case "eraser":
                 context.beginPath();
                 context.fillStyle = "#FFFFFF";
-                context.arc(x, y, 50, 0, Math.PI * 2, false);
+                context.arc(x, y, eraserRadius * 0.5, 0, Math.PI * 2, false);
                 context.fill();
                 break;
             default:
