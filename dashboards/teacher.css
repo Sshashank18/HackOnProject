@@ -1,0 +1,47 @@
+body,html{
+    margin:0;
+}
+
+#history{
+    width:400px;
+    height:97vh;
+    background-color: burlywood;
+    float:left;
+}
+
+.head1{
+    padding:25px;
+    margin-left:75px;
+}
+
+#container{
+    width:950px;
+    height:97vh;
+    margin-left:400px;
+}
+
+#navbar{
+    background-color: black;
+    color:white;
+    height: 50px;
+}
+
+#navbar>ul{
+    list-style: none;
+}
+
+#navbar>ul>li{
+    margin-left:95px;
+    width:150px;
+    padding-top:15px;
+    padding-bottom:20px;
+    text-align: center;
+    float:left;
+}
+
+#navbar>ul>li:hover{
+    background-color: white;
+    color:black;
+    cursor:pointer;
+}
+
