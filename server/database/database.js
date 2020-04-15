@@ -21,7 +21,7 @@ const Users=database.define('user',{
         type:Sequelize.STRING,
         allowNull:false
     },
-    Position:{
+    Role:{
         type:Sequelize.STRING,
         allowNull:false,
     }

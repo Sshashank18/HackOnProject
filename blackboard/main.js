@@ -3,6 +3,9 @@ let canvas = document.getElementById("canvas"),
     width = canvas.width = window.innerWidth,
     height = canvas.height = window.innerHeight;
 
+    context.fillStyle = "#000000";
+context.fillRect(0, 0, width, height);
+
 let mouseWrapper = document.getElementById("mouseWrapper");
 
 let mouseDown = false;
@@ -13,7 +16,7 @@ let currentTool = "pen";
 
 
 let eraserRadius = 50;
-let pencilColor = "#000000";
+let pencilColor = "#FFFFFF";
 
 canvas.addEventListener("mousemove", event => {
     let x = event.clientX,
@@ -44,7 +47,7 @@ canvas.addEventListener("mousemove", event => {
                 
             case "eraser":
                 context.beginPath();
-                context.fillStyle = "#FFFFFF";
+                context.fillStyle = "#000000";
                 context.arc(x, y, eraserRadius * 0.5, 0, Math.PI * 2, false);
                 context.fill();
                 break;
