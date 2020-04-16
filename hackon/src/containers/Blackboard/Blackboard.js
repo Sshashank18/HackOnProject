@@ -12,11 +12,11 @@ class Blackboard extends Component {
     componentDidMount() {
         let canvas = document.getElementById("canvas"),
             context = canvas.getContext("2d"),
-            width = canvas.width = window.innerWidth,
+            width = canvas.width = window.innerWidth / 2.1,
             height = canvas.height = window.innerHeight;
 
         context.fillStyle = "#000000";
-        context.fillRect(0, 0, width, height);
+        context.fillRect(0, 0, width, height / 1.75);
 
         let mouseWrapper = document.getElementById("mouseWrapper");
 
@@ -30,16 +30,19 @@ class Blackboard extends Component {
         let eraserRadius = 50;
         let pencilColor = "#FFFFFF";
 
+        let offsetX = 750;
+        let offsetY = 90;
+
         canvas.addEventListener("mousemove", event => {
-            let x = event.clientX,
+            let x = event.clientX - offsetX,
                 y = event.clientY;
 
             if (currentTool === "eraser") {
-                let offset = eraserRadius * 0.4;
+                let offset = eraserRadius;
                 mouseWrapper.style.width = eraserRadius + "px";
                 mouseWrapper.style.height = eraserRadius + "px";
-                mouseWrapper.style.left = x - offset + "px";
-                mouseWrapper.style.top = y - offset + "px";
+                mouseWrapper.style.left = x + offsetX - 0.5 * offset + "px";
+                mouseWrapper.style.top = y + offsetY - 2 * offset + "px";
             } else {
                 mouseWrapper.style.left = "-100px";
                 mouseWrapper.style.top = "-100px";
