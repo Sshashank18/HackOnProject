@@ -27,11 +27,13 @@ class TextEditor extends Component {
     textEditorHandler = event => {
         this.setState({
             textEditor: event.target.value
+        }, () => {
+            this.socket.emit('shareTextEditor', {
+                textEditor: this.state.textEditor
+            });
+
         });
 
-        this.socket.emit('shareTextEditor', {
-            textEditor: this.state.textEditor
-        });
     }
 
     componentDidMount() {
