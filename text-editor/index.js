@@ -1,4 +1,8 @@
 window.addEventListener("load",function(){
+    var editor2=inpContent.document;
+    editor2.designMode="on";
+
+    
     var editor = theWYSIWYG.document;
     //theWYSIWYG is the name tag used here not ID and .document is used because iframe has its own document.
     editor.designMode="on";
