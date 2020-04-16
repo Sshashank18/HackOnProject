@@ -1,0 +1,88 @@
+.textEditor{
+    width:750px;
+    height:350px;
+}
+
+.theRibbon{
+    border-bottom:none;
+    padding:10px;
+    background-color: rgb(40,110,89);
+    color:white;
+    border-radius:8px 8px 0px 0px;
+}
+
+.richTextArea{
+    border:2px solid rgb(40,110,89);
+    height: 100%;
+    width: 746px;
+    resize: none;
+    overflow: scroll;
+    line-height: 2px;
+}
+
+.outputBox{
+    border:2px solid rgb(40,110,89);
+    height: 200px;
+    width: 746px;
+}
+
+.input{
+    width:373px;
+    height:170px;
+    float: left;
+    overflow: scroll;
+}
+
+.inpContent{
+    height:100%;
+    width:100%;
+}
+
+.output{
+    width: 373px;
+    height:170px;
+    float: right;
+    background-color: black;
+    color: white;
+}
+
+.outputHeading{
+    border-bottom:none;
+    padding:5px;
+    padding-left:15px;
+    background-color: rgb(40,110,89);
+    color:white;
+}
+
+.inpHead{
+    display: inline;
+}
+
+.outHead{
+    display: inline;
+    margin-left:350px;
+}
+
+.theWYSIWYG{
+    height:100%;
+    width:100%;
+}
+
+.theRibbon>button{
+    color:white;
+    border:none;
+    outline:none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.theRibbon>button:hover{
+    background-color: rgb(20,90,70);
+    transition: all 0.3s linear 0s;
+}
+
+input[type="color"]{
+    border:none;
+    outline:none;
+    background-color: transparent;
+}

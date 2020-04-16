@@ -8,6 +8,14 @@ const socket = (io) => {
         socket.on('shareEraser', data => {
             socket.broadcast.emit('getEraser', data);
         });
+
+        socket.on('shareInput' ,data => {
+            socket.broadcast.emit('getInput', data);
+        });
+        
+        socket.on('shareTextEditor' ,data => {
+            socket.broadcast.emit('getTextEditor', data);
+        });
     });
 }
 
