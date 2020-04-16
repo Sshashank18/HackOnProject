@@ -13,7 +13,8 @@ class Login extends Component {
         
     }
 
-    clickHandler = () => {
+    clickHandler = event => {
+        event.preventDefault();
         if (this.state.type === "Teacher") {
             window.location = "/teacher";
         } else {
