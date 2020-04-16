@@ -12,11 +12,11 @@ class StudentBlackboad extends Component {
         // Setup socket to listen to oen or eraser events
         let canvas = document.getElementById("studentBlackboard"),
             context = canvas.getContext("2d"),
-            width = canvas.width = window.innerWidth,
+            width = canvas.width = window.innerWidth / 1.75,
             height = canvas.height = window.innerHeight;
 
         context.fillStyle = "#000000";
-        context.fillRect(0, 0, width, height);
+        context.fillRect(0, 0, width, height / 1.75);
 
         context.save();
         this.socket.on('getPen', data => {

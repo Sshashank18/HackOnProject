@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import classes from './App.css';
-
-import Blackboard from './containers/Blackboard/Blackboard';
-import StudentBlackboad from './containers/StudentBlackboard/StudentBlacjboard';
-import TextEditor from './containers/TextEditor/TextEditor';
 
 import { Switch, Route } from 'react-router-dom';
 
 import socketIOClient from 'socket.io-client';
-import StudentTextEditor from './containers/StudentTextEditor/StudentTextEditor';
 
 import TeacherApp from './apps/Teacher/Teacher';
+import StudentApp from './apps/Student/Student';
 
 class App extends Component {
   constructor(props) {
@@ -21,10 +16,8 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
-        {/* <Route path="/" exact render={props => <Blackboard {...props} socket={this.socket} />} /> */}
-        {/* <Route path="/student" exact render={props => <StudentBlackboad {...props} socket={this.socket} />} /> */}
         <Route path="/" exact render={props => <TeacherApp {...props} socket={this.socket} />} />
-        <Route path="/student" exact render={props => <StudentTextEditor {...props} socket={this.socket} />} />
+        <Route path="/student" exact render={props => <StudentApp {...props} socket={this.socket} />} />
       </Switch>
     );
 

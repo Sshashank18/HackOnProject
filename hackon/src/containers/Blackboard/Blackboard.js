@@ -12,7 +12,7 @@ class Blackboard extends Component {
     componentDidMount() {
         let canvas = document.getElementById("canvas"),
             context = canvas.getContext("2d"),
-            width = canvas.width = window.innerWidth / 2.1,
+            width = canvas.width = window.innerWidth / 1.75,
             height = canvas.height = window.innerHeight;
 
         context.fillStyle = "#000000";
