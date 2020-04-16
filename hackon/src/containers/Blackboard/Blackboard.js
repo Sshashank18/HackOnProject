@@ -5,6 +5,7 @@ import classes from './Blackboard.css';
 class Blackboard extends Component {
 
     constructor(props) {
+        super(props);
         this.socket = this.props.socket;
     }
 
@@ -56,11 +57,12 @@ class Blackboard extends Component {
                         context.stroke();
 
                         // Socket call to draw line
-                        socket.emit('sharePen', {
+                        this.socket.emit('sharePen', {
                             lastX,
                             lastY,
                             x,
-                            y
+                            y,
+                            pencilColor
                         });
                         break;
                         
@@ -71,6 +73,11 @@ class Blackboard extends Component {
                         context.fill();
 
                         // Socket Call to draw eraser
+                        this.socket.emit('shareEraser', {
+                            x,
+                            y,
+                            eraserRadius
+                        });
                         break;
                     default:
                         break;

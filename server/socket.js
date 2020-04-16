@@ -1,13 +1,12 @@
 const socket = (io) => {
     io.on("connection", socket => {
-        console.log(socket.id);
         socket.on('sharePen', data => {
-            console.log(data);
+            socket.broadcast.emit('getPen', data);
         });
 
 
         socket.on('shareEraser', data => {
-            console.log(data);
+            socket.broadcast.emit('getEraser', data);
         });
     });
 }
