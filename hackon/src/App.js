@@ -12,7 +12,7 @@ import StudentApp from './apps/Student/Student';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.socket = socketIOClient("http://192.168.0.101:7500");
+    this.socket = socketIOClient("http://192.168.43.186:7500");
   }
   
   render() {

@@ -1,0 +1,30 @@
+.Header{
+    background-color: black;
+    color: wheat;
+}
+.messageBox{
+    height: 80%;
+    overflow: scroll;
+}
+.message{
+    background-color: gray;
+    max-width: 50%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border-radius: 5px;
+}
+.SendContainer{
+    display: flex;
+    width: 100%;
+}
+.SendInput{
+    width: 90%;
+}
+.SendIconCont{
+    width: 10%;
+}
+.SendIcon{
+    margin-left: 5px;
+    color: darkblue;
+    cursor: pointer;
+}

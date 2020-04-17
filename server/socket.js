@@ -16,6 +16,9 @@ const socket = (io) => {
         socket.on('shareTextEditor' ,data => {
             socket.broadcast.emit('getTextEditor', data);
         });
+        socket.on('sendMessage', data => {
+            socket.broadcast.emit('recieveMessage', data);
+        });
     });
 }
 

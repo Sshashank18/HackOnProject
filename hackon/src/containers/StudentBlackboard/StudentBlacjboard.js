@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classes from './StudentBlackBoard.css'
 
 class StudentBlackboad extends Component {
     constructor(props) {
@@ -40,7 +41,7 @@ class StudentBlackboad extends Component {
 
     render() {
         return (
-            <canvas id="studentBlackboard">
+            <canvas id="studentBlackboard" className={classes.canvas}>
                 
             </canvas>
         );

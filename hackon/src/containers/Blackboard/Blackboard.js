@@ -8,7 +8,7 @@ class Blackboard extends Component {
         super(props);
         this.socket = this.props.socket;
     }
-
+ 
     componentDidMount() {
         let canvas = document.getElementById("canvas"),
             context = canvas.getContext("2d"),
@@ -115,7 +115,7 @@ class Blackboard extends Component {
     render() {
         return (
             <React.Fragment>
-                <canvas id="canvas">
+                <canvas id="canvas" className={classes.canvas}>
 
                 </canvas>
 
